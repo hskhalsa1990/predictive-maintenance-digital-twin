@@ -1,0 +1,5 @@
+{"rpm":1800,"load":1.0,"temperature_c":62.0,"vibration_rms":0.55,"vibration_peak":1.9,"peak_to_peak":3.4,
+ "crest_factor":3.4,"kurtosis":0.2,"skewness":0.0,"dominant_frequency_hz":30.0,"envelope_rms":0.12,
+ "envelope_peak_amplitude":0.05,"fft_energy_0_80":1000.0,"fft_energy_80_200":50.0,"fft_energy_200_500":5.0,
+ "fft_energy_500_1000":1.0,"fft_energy_1000_2000":0.5,"order_1x_amplitude":500.0,"order_2x_amplitude":80.0,
+ "order_3x_amplitude":10.0,"dominant_order":1.0}

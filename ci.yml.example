@@ -1,0 +1,20 @@
+# Move to .github/workflows/ci.yml (GitHub web UI: Add file > Create new file, type the path) and paste this.
+name: ci
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -r requirements.txt
+      - run: python -m compileall -q .
+      - run: python -m unittest discover -p "test_*.py" -v
+      - run: python train_models.py --machines 3 --cycles 40 --out /tmp/pm
